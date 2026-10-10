@@ -3,7 +3,7 @@ import { lockScroll, scrollTo } from "../lib/scroll";
 import { PROFILE, PROJECTS, CERTIFICATES } from "../data";
 
 const ISSUERS = [...new Set(CERTIFICATES.map((c) => c.issuer))];
-const AI_PROJECTS = PROJECTS.filter((p) => ["AI Agents", "RAG"].includes(p.category));
+const AI_PROJECTS = PROJECTS.filter((p) => ["AI Agents", "RAG", "Hackathon"].includes(p.category));
 
 const MENU = [
   { label: "Work", href: "#work", kind: "shots", shots: PROJECTS, caption: `${PROJECTS.length} projects, all live.` },

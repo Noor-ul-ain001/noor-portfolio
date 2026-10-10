@@ -1351,6 +1351,115 @@ ol {
 .work__index button.is-active::before {
   width: 18px;
 }
+.work__slides {
+  position: absolute;
+  inset: 0;
+  animation: work-swap 0.7s var(--ease-out);
+}
+@keyframes work-swap {
+  from {
+    opacity: 0;
+  }
+}
+/* Category filter: chips sit in the slide's top row, opposite the case-study counter */
+.work__filter {
+  position: absolute;
+  top: 98px;
+  right: calc(var(--gutter) + 56px);
+  z-index: 6;
+}
+.slide__cat {
+  visibility: hidden;
+}
+.work__chips {
+  display: flex;
+  gap: 6px;
+}
+.work__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+.work__chip sup {
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  vertical-align: baseline;
+}
+.work__chip.is-current::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+.work__chip:hover {
+  color: var(--cream);
+  border-color: rgba(243, 239, 231, 0.4);
+}
+.work__chip.is-on {
+  color: var(--ink);
+  background: var(--lime);
+  border-color: var(--lime);
+}
+.work__select {
+  display: none;
+  position: relative;
+}
+.work__select::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--lime);
+  pointer-events: none;
+}
+.work__select select {
+  appearance: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  font-size: 10px;
+  max-width: 100%;
+  padding: 8px 32px 8px 14px;
+  color: var(--cream);
+  background: rgba(10, 10, 10, 0.55);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.work__select select:focus-visible {
+  border-color: var(--lime);
+}
+.work__select option {
+  color: var(--cream);
+  background: var(--ink-2);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+@media (max-width: 1180px) {
+  .work__chips {
+    display: none;
+  }
+  .work__select {
+    display: block;
+  }
+}
 .work__progress {
   position: absolute;
   left: 0;
@@ -2039,8 +2148,19 @@ a.cert:hover .cert__title {
     display: none;
   }
   .work__index button::after {
-    content: " / 13";
+    content: " / " attr(data-total);
     color: var(--muted);
+  }
+  /* Small screens: the dropdown moves to the bottom-left, opposite the slide counter */
+  .work__filter {
+    top: auto;
+    right: auto;
+    left: var(--gutter);
+    bottom: 18px;
+    max-width: calc(100% - 2 * var(--gutter) - 64px);
+  }
+  .slide__cat {
+    visibility: visible;
   }
 
   .oss__grid {

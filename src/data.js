@@ -64,6 +64,39 @@ const projectData = [
     code: "https://github.com/Noor-ul-ain001/aurelia-parfum",
   },
   {
+    title: "Kitchen Stories",
+    subtitle: "Flip-through Recipe Book",
+    category: "UI / Frontend",
+    description:
+      "A vintage, kitchen-worn recipe book with realistic 3D page turns by click, swipe or arrow keys, a synthesised paper-rustle sound, and 18 recipes laid out like a hand-made scrapbook with stamped titles and tossed ingredient cut-outs.",
+    tags: ["React", "Vite", "CSS 3D", "Web Audio"],
+    image: "/img/kitchen-stories.webp",
+    live: "https://kitchen-stories-eight.vercel.app",
+    code: "https://github.com/Noor-ul-ain001/kitchen-stories",
+  },
+  {
+    title: "Aesthetoderm",
+    subtitle: "Aesthetics & Dermatology Clinic",
+    category: "UI / Frontend",
+    description:
+      "A multi-page marketing site for an injectables and dermatology practice in Karachi: a preloader, curtain page transitions, split-line heading reveals, a pinned horizontal scroll through signature treatments, and a velocity-reactive marquee.",
+    tags: ["React", "GSAP", "Lenis", "React Router"],
+    image: "/img/aesthetoderm.webp",
+    live: "https://aesthetoderm-website.vercel.app",
+    code: "https://github.com/Noor-ul-ain001/aesthetoderm-website",
+  },
+  {
+    title: "Refine Aesthetics",
+    subtitle: "Skin & Dental Clinic Website",
+    category: "UI / Frontend",
+    description:
+      "A soft, editorial site for an aesthetics, skincare and dental clinic in Karachi: treatments with category filters and detail pages, a seven-step patient journey, reviews, FAQs, and a booking form that hands off to WhatsApp.",
+    tags: ["React", "Vite", "React Router", "CSS"],
+    image: "/img/refine-aesthetics.webp",
+    live: "https://refine-aesthetics-website.vercel.app",
+    code: "https://github.com/Noor-ul-ain001/refine-aesthetics-website",
+  },
+  {
     title: "The Buzz Crew",
     subtitle: "Agency Portfolio",
     category: "UI / Frontend",
@@ -161,6 +194,28 @@ const projectData = [
     image: "/img/inventory.webp",
     live: "https://supply-chain-inventory.vercel.app",
     code: "https://github.com/Noor-ul-ain001/supplychain",
+  },
+  {
+    title: "Utility Bill Decoder",
+    subtitle: "Hackathon · WTQ Build Track",
+    category: "Hackathon",
+    description:
+      "Built for the WTQ Build Track challenge: an AI assistant that reads K-Electric, LESCO and IESCO electricity bills from photos, extracts every charge and tax as structured JSON, cross-checks the totals, and answers usage questions in plain English.",
+    tags: ["Gemini", "FastAPI", "React", "TypeScript"],
+    image: "/img/bill-decoder.webp",
+    live: "https://utility-bill-decoder.vercel.app",
+    code: "https://github.com/Noor-ul-ain001/utility-bill-decoder",
+  },
+  {
+    title: "Shieldly",
+    subtitle: "Digital Safety Case Agent",
+    category: "Hackathon",
+    description:
+      "A bilingual safety platform for women in Pakistan facing online abuse: AI checks images for manipulation, a hashed evidence vault exports a case-file PDF, and a guided assistant drafts the NCCIA complaint, with everything kept on her own device.",
+    tags: ["Next.js", "TypeScript", "Gemini", "AI SDK"],
+    image: "/img/shieldly.webp",
+    live: "https://shieldly-tau.vercel.app",
+    code: "https://github.com/Noor-ul-ain001/shieldly",
   },
 ];
 
